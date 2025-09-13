@@ -8,11 +8,11 @@ import PromoSection from '../components/PromoSection';
 const HomePage = ({ navigateTo }) => {
   return (
     <>
-      {/* Navbar tidak lagi di sini, karena akan dirender di App.jsx */}
       <HeroSection navigateTo={navigateTo} />
       <FeaturedDestinations />
-      <CategorySection />
-      <PromoSection />
+      {/* PERBAIKAN: Teruskan 'navigateTo' ke komponen di bawah */}
+      <CategorySection navigateTo={navigateTo} />
+      <PromoSection navigateTo={navigateTo} />
     </>
   );
 };

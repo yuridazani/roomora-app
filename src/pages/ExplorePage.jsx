@@ -22,18 +22,18 @@ const ExplorePage = ({ navigateTo, context }) => {
 
   const [filteredProperties, setFilteredProperties] = useState(allProperties);
 
-  // Handler untuk input teks dan harga
+  // Handler input teks/harga
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFilters(prev => ({ ...prev, [name]: value }));
   };
 
-  // Handler untuk rating
+  // Handler rating
   const handleRatingChange = (rating) => {
     setFilters(prev => ({ ...prev, minRating: prev.minRating === rating ? 0 : rating }));
   };
 
-  // Handler untuk fasilitas
+  // Handler fasilitas
   const handleFacilityChange = (e) => {
     const { name, checked } = e.target;
     setFilters(prev => ({
@@ -44,7 +44,7 @@ const ExplorePage = ({ navigateTo, context }) => {
 
   // Filter properties tiap kali filters berubah
   useEffect(() => {
-    let result = allProperties.filter(property => {
+    const result = allProperties.filter(property => {
       if (filters.searchTerm && !property.name.toLowerCase().includes(filters.searchTerm.toLowerCase())) return false;
       if (filters.minPrice && property.price < filters.minPrice) return false;
       if (filters.maxPrice && property.price > filters.maxPrice) return false;
