@@ -2,8 +2,6 @@
 
 **Roomora** adalah prototipe aplikasi web *frontend* modern untuk platform pemesanan properti, yang dibangun dengan visi untuk menciptakan antarmuka yang estetik, modern, dan fungsional.
 
-![Tangkapan Layar Roomora](yuridazani/roomora-app/roomora-app-1eaf9cf97e5369891efd69de49a47b8a26f885b0/src/assets/image_56e499.jpg)
-
 ### Tagline
 *"Find your stay, feel at home."*
 
