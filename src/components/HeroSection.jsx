@@ -41,34 +41,69 @@ const HeroSection = ({ navigateTo }) => {
           Discover curated villas, hotels, and resorts that feel like they were made just for you.
         </p>
 
-        {/* Search Bar */}
-        <div className="bg-white/20 backdrop-blur-md p-3 rounded-full flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto">
-          <input
-            type="text"
-            name="location"
-            placeholder="Where to? (e.g., Bali)"
-            onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
-          />
-          <input
-            type="date"
-            name="checkIn"
-            onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 text-champagne/70 focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
-          />
-          <input
-            type="number"
-            name="guests"
-            placeholder="2 Guests"
-            onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
-          />
-          <button
-            onClick={handleSearch}
-            className="bg-bright-pink text-white font-bold rounded-full w-full md:w-auto px-8 py-3 hover:bg-opacity-90 transition-all transform hover:scale-105"
-          >
-            Search
-          </button>
+        {/* Search Bar - Mobile First Design */}
+        <div className="max-w-3xl mx-auto">
+          {/* Mobile Layout */}
+          <div className="md:hidden bg-white/95 backdrop-blur-md p-4 rounded-2xl space-y-4">
+            <div className="space-y-3">
+              <input
+                type="text"
+                name="location"
+                placeholder="Where to? (e.g., Bali)"
+                onChange={handleInputChange}
+                className="w-full bg-white/50 backdrop-blur-sm text-gray-800 placeholder-gray-600 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-bright-pink focus:border-transparent transition-all"
+              />
+              <input
+                type="date"
+                name="checkIn"
+                onChange={handleInputChange}
+                className="w-full bg-white/50 backdrop-blur-sm text-gray-800 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-bright-pink focus:border-transparent transition-all"
+              />
+              <input
+                type="number"
+                name="guests"
+                placeholder="2 Guests"
+                onChange={handleInputChange}
+                className="w-full bg-white/50 backdrop-blur-sm text-gray-800 placeholder-gray-600 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-bright-pink focus:border-transparent transition-all"
+              />
+            </div>
+            <button
+              onClick={handleSearch}
+              className="w-full bg-bright-pink text-white font-bold rounded-xl py-4 hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Search
+            </button>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex bg-white/20 backdrop-blur-md p-3 rounded-full items-center gap-4">
+            <input
+              type="text"
+              name="location"
+              placeholder="Where to? (e.g., Bali)"
+              onChange={handleInputChange}
+              className="bg-transparent w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+            />
+            <input
+              type="date"
+              name="checkIn"
+              onChange={handleInputChange}
+              className="bg-transparent w-1/3 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+            />
+            <input
+              type="number"
+              name="guests"
+              placeholder="2 Guests"
+              onChange={handleInputChange}
+              className="bg-transparent w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+            />
+            <button
+              onClick={handleSearch}
+              className="bg-bright-pink text-white font-bold rounded-full px-8 py-3 hover:bg-opacity-90 transition-all transform hover:scale-105"
+            >
+              Search
+            </button>
+          </div>
         </div>
       </div>
     </div>
