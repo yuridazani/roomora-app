@@ -1,12 +1,59 @@
-# React + Vite
+# Roomora 🌌 - Property Booking Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Roomora** adalah prototipe aplikasi web *frontend* modern untuk platform pemesanan properti, yang dibangun dengan visi untuk menciptakan antarmuka yang estetik, modern, dan fungsional.
 
-Currently, two official plugins are available:
+![Tangkapan Layar Roomora](yuridazani/roomora-app/roomora-app-1eaf9cf97e5369891efd69de49a47b8a26f885b0/src/assets/image_56e499.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tagline
+*"Find your stay, feel at home."*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📜 Tentang Proyek
+
+Proyek ini merupakan simulasi lengkap dari pengalaman pengguna pada sebuah platform *booking online*. Dibangun dari nol, Roomora didesain untuk menjadi sebuah *portfolio piece* yang menunjukkan kemampuan dalam pengembangan antarmuka web modern, mulai dari konsep desain hingga implementasi fitur-fitur kompleks.
+
+Aplikasi ini bersifat *frontend-only*, artinya tidak ada *database* atau *server* sungguhan. Seluruh data (seperti daftar properti dan status login) dikelola di sisi klien menggunakan React Context, menjadikannya contoh sempurna untuk mendemonstrasikan keahlian dalam manajemen *state* dan arsitektur komponen.
+
+## ✨ Fitur Utama
+
+-   **Halaman Utama Dinamis**: *Landing page* yang menarik secara visual dengan beberapa bagian: *hero section*, destinasi unggulan, penjelajahan berdasarkan kategori, dan bagian promo.
+-   **Eksplorasi & Filter Canggih**: Pengguna dapat melihat semua properti dan memfilternya secara *real-time* berdasarkan nama, harga, rating, dan fasilitas.
+-   **Tampilan Detail Properti**: Halaman yang menampilkan informasi lengkap tentang properti, termasuk galeri foto, deskripsi, fasilitas, dan boks pemesanan.
+-   **Alur Pemesanan Lengkap**: Pengguna dapat mengisi detail pemesanan di halaman konfirmasi dan akan mendapatkan halaman sukses dengan ringkasan transaksi.
+-   **Sistem Akun & Wishlist**: Pengguna dapat "login" (simulasi) untuk mengakses halaman akun pribadi, di mana mereka bisa melihat daftar properti yang telah mereka tandai sebagai favorit (*wishlist*).
+-   **UX Modern**: Menggunakan sistem notifikasi modal yang profesional untuk menggantikan `alert()` bawaan browser, memberikan pengalaman pengguna yang lebih baik.
+
+## 🛠️ Teknologi yang Digunakan
+
+-   **React.js (v19)**: Fondasi utama untuk membangun antarmuka pengguna yang interaktif dan berbasis komponen.
+-   **Vite**: *Build tool* modern yang memberikan pengalaman pengembangan super cepat.
+-   **Tailwind CSS (via CDN)**: *Framework* CSS *utility-first* untuk mendesain antarmuka kustom dengan cepat.
+-   **Lucide React**: *Library* ikon yang ringan, modern, dan konsisten.
+-   **React Context**: Digunakan untuk manajemen *state* global, terutama untuk `AuthContext` (status login & *wishlist*) dan `ModalContext` (sistem notifikasi).
+
+## 🚀 Instalasi & Menjalankan Proyek
+
+Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah berikut:
+
+1.  **Clone repository ini:**
+    ```bash
+    git clone https://[URL-REPOSITORY-ANDA].git
+    ```
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd roomora-app
+    ```
+3.  **Install semua *dependencies*:**
+    ```bash
+    npm install
+    ```
+4.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+    Buka browser Anda dan navigasi ke `http://localhost:5173` (atau port lain yang ditampilkan di terminal).
+
+## 📁 Struktur Folder
+
+Proyek ini diorganisir dengan struktur folder yang jelas untuk memisahkan setiap concern:
