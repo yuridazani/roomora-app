@@ -42,31 +42,30 @@ const HeroSection = ({ navigateTo }) => {
         </p>
 
         {/* Search Bar */}
-        <div className="bg-white/20 backdrop-blur-md p-3 rounded-full flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto">
+        <div className="bg-white/30 backdrop-blur-md p-4 md:p-3 rounded-2xl md:rounded-full flex flex-col md:flex-row items-center gap-3 md:gap-4 max-w-3xl mx-auto">
           <input
             type="text"
             name="location"
             placeholder="Where to? (e.g., Bali)"
             onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 placeholder-white/80 text-white focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+            className="bg-white/20 md:bg-transparent w-full md:w-1/3 placeholder-white/90 text-white focus:outline-none border-2 md:border-b-2 border-white/30 md:border-transparent focus:border-bright-pink rounded-xl md:rounded-none transition-colors px-4 md:px-2 py-3 md:py-1"
           />
           <input
             type="date"
             name="checkIn"
             onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 text-white focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1 
-            [color-scheme:dark]"
+            className="bg-white/20 md:bg-transparent w-full md:w-1/3 text-white focus:outline-none border-2 md:border-b-2 border-white/30 md:border-transparent focus:border-bright-pink rounded-xl md:rounded-none transition-colors px-4 md:px-2 py-3 md:py-1 [color-scheme:dark]"
           />
           <input
             type="number"
             name="guests"
             placeholder="2 Guests"
             onChange={handleInputChange}
-            className="bg-transparent w-full md:w-1/3 placeholder-white/80 text-white focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+            className="bg-white/20 md:bg-transparent w-full md:w-1/3 placeholder-white/90 text-white focus:outline-none border-2 md:border-b-2 border-white/30 md:border-transparent focus:border-bright-pink rounded-xl md:rounded-none transition-colors px-4 md:px-2 py-3 md:py-1"
           />
           <button
             onClick={handleSearch}
-            className="bg-bright-pink text-white font-bold rounded-full w-full md:w-auto px-8 py-3 hover:bg-opacity-90 transition-all transform hover:scale-105"
+            className="bg-bright-pink text-white font-bold rounded-full w-full md:w-auto px-8 py-4 md:py-3 hover:bg-opacity-90 transition-all transform hover:scale-105 mt-2 md:mt-0"
           >
             Search
           </button>
