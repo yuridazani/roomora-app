@@ -38,7 +38,7 @@ Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah ber
 
 1.  **Clone repository ini:**
     ```bash
-    git clone https://[URL-REPOSITORY-ANDA].git
+    git clone [https://github.com/yuridazani/roomora-app.git]
     ```
 2.  **Masuk ke direktori proyek:**
     ```bash
