@@ -27,7 +27,7 @@ const HeroSection = ({ navigateTo }) => {
       className="min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(17, 53, 55, 0.7), rgba(17, 53, 55, 0.5)), url('https://images.unsplash.com/photo-15827195084a1-905c673771fd?q=80&w=2825&auto=format&fit=crop')"
+          "linear-gradient(rgba(17, 53, 55, 0.5), rgba(17, 53, 55, 0.2)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3')"
       }}
     >
       <div className="text-center text-white px-4">

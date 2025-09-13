@@ -8,19 +8,22 @@ const categories = [
   { name: "Guesthouse", icon: <BedDouble size={40} /> },
 ];
 
-const CategoryCard = ({ name, icon }) => (
-  <div className="group bg-rose-taupe/10 p-8 rounded-2xl flex flex-col items-center justify-center text-center cursor-pointer
-                  transition-all duration-300 ease-in-out hover:bg-rose-taupe hover:scale-105 transform">
+const CategoryCard = ({ name, icon, navigateTo }) => (
+  <button 
+    onClick={() => navigateTo('explore', { initialFilters: { category: name } })}
+    className="group bg-rose-taupe/10 p-8 rounded-2xl flex flex-col items-center justify-center text-center cursor-pointer
+               transition-all duration-300 ease-in-out hover:bg-rose-taupe hover:scale-105 transform w-full"
+  >
     <div className="text-rose-taupe transition-colors duration-300 group-hover:text-white">
       {icon}
     </div>
     <h3 className="font-clash text-xl font-medium text-charcoal mt-4 transition-colors duration-300 group-hover:text-white">
       {name}
     </h3>
-  </div>
+  </button>
 );
 
-const CategorySection = () => {
+const CategorySection = ({ navigateTo }) => {
   return (
     <section id="categories" className="bg-champagne py-20 px-6">
       <div className="container mx-auto">
@@ -32,11 +35,15 @@ const CategorySection = () => {
             Find the perfect type of stay that matches your vibe and your needs.
           </p>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {categories.map(category => (
-            <CategoryCard key={category.name} {...category} />
+            <CategoryCard key={category.name} {...category} navigateTo={navigateTo} />
           ))}
         </div>
+
+        {/* Divider opsional */}
+        <hr className="border-t-2 border-rose-taupe/20 max-w-4xl mx-auto mt-20" />
       </div>
     </section>
   );

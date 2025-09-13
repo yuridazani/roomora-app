@@ -1,11 +1,11 @@
 import React from 'react';
-import { MapPin } from 'lucide-react'; // Import ikon dari lucide-react
+import { MapPin } from 'lucide-react';
 
 const destinations = [
-  { name: "Bali", properties: "2,480", image: "https://images.unsplash.com/photo-1537996194471-e657df97525d?q=80&w=2835&auto=format=fit=crop" },
-  { name: "Jogja", properties: "1,120", image: "https://images.unsplash.com/photo-1596422846543-75c611475b2d?q=80&w=2835&auto=format=fit=crop" },
-  { name: "Bandung", properties: "1,850", image: "https://images.unsplash.com/photo-1622611794711-1521226a1f0a?q=80&w=2835&auto=format=fit=crop" },
-  { name: "Lombok", properties: "980", image: "https://images.unsplash.com/photo-1580975253488-2d88a44256c7?q=80&w=2835&auto=format=fit=crop" },
+  { name: "Bali", properties: "2,480", image: "https://images.unsplash.com/photo-1537996194471-e657df97525d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80" },
+  { name: "Jogja", properties: "1,120", image: "https://images.unsplash.com/photo-1596422846543-75c611475b2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80" },
+  { name: "Bandung", properties: "1,850", image: "https://images.unsplash.com/photo-1622611794711-1521226a1f0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80" },
+  { name: "Lombok", properties: "980", image: "https://images.unsplash.com/photo-1580975253488-2d88a44256c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80" },
 ];
 
 const DestinationCard = ({ name, properties, image }) => {
@@ -15,6 +15,9 @@ const DestinationCard = ({ name, properties, image }) => {
         src={image} 
         alt={name} 
         className="w-full h-96 object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110"
+        onError={(e) => {
+          e.target.src = 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80';
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
 
@@ -48,6 +51,9 @@ const FeaturedDestinations = () => {
             <DestinationCard key={dest.name} {...dest} />
           ))}
         </div>
+
+        {/* Divider opsional */}
+        <hr className="border-t-2 border-rose-taupe/20 max-w-4xl mx-auto mt-20" />
       </div>
     </section>
   );

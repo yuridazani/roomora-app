@@ -51,9 +51,13 @@ const PromoSection = ({ navigateTo }) => {
         <div className="relative h-full">
           <div className="w-full h-[450px] rounded-2xl overflow-hidden transform md:rotate-2 transition-transform duration-300 hover:rotate-0 hover:scale-105 cursor-pointer">
             <img 
-              src="https://images.unsplash.com/photo-1613977257363-31b5c27f3b6d?q=80&w=2787&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1613977257363-31b5c27f3b6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80" 
               alt="Luxury villa promo"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback image jika gagal load
+                e.target.src = 'https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80';
+              }}
             />
           </div>
         </div>

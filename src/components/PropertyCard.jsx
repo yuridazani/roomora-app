@@ -27,6 +27,16 @@ const PropertyCard = ({ property, navigateTo }) => {
     toggleWishlist(property.id);
   };
 
+  const handleImageError = (e) => {
+    // Fallback ke gambar default jika gagal load
+    e.target.src = 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80';
+  };
+
+  // Ambil gambar pertama dari array images
+  const imageUrl = property.images && property.images.length > 0 
+    ? property.images[0] 
+    : 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80';
+
   return (
     <div
       onClick={handleCardClick}
@@ -34,9 +44,10 @@ const PropertyCard = ({ property, navigateTo }) => {
     >
       <div className="relative">
         <img
-          src={property.image}
+          src={imageUrl}
           alt={property.name}
           className="w-full h-56 object-cover"
+          onError={handleImageError}
         />
         {/* Wishlist button */}
         <button
