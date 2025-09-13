@@ -54,4 +54,33 @@ Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah ber
 
 ## 📁 Struktur Folder
 
-Proyek ini diorganisir dengan struktur folder yang jelas untuk memisahkan setiap concern:
+```
+src
+├── assets/         // Gambar & ikon lokal
+├── components/     // Komponen UI yang dapat dipakai ulang
+├── context/        // React Context untuk state global
+├── data/           // Data statis/tiruan (daftar properti)
+├── pages/          // Komponen halaman (HomePage, ExplorePage, dll.)
+├── App.jsx         // Komponen utama + routing
+└── main.jsx        // Titik masuk aplikasi React
+```
+
+## 🎨 Identitas Brand
+
+**Tipografi**
+- Heading / Logo: `Clash Display`
+- Body: `Satoshi`
+- Accent: `Recoleta` (*fallback*: `Playfair Display`)
+
+**Palet Warna**
+- Primary (Brand Main): `Midnight Green` - `#113537`
+- Secondary: `Charcoal` - `#37505C`
+- Background Light: `Champagne` - `#FFEAD0`
+- Accent: `Bright Pink Crayola` - `#F76F8E`
+- Neutral/Detail: `Rose Taupe` - `#96616B`
+
+---
+
+Proyek ini adalah demonstrasi pengembangan aplikasi *frontend* modern dari ide hingga eksekusi.
+
+**Dibuat oleh: Yurida Zani**
