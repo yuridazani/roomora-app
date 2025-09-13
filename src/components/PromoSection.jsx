@@ -1,7 +1,14 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
-const PromoSection = () => {
+const PromoSection = ({ navigateTo }) => {
+  const handleClaimOffer = () => {
+    // Navigasi ke explore dengan context filter
+    navigateTo('explore', { 
+      initialFilters: { category: 'Villa' } 
+    });
+  };
+
   return (
     <section id="promo" className="bg-champagne py-20 px-6">
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -31,8 +38,11 @@ const PromoSection = () => {
             </li>
           </ul>
 
-          <button className="bg-bright-pink text-white font-bold py-3 px-8 rounded-full mt-8 
-                             hover:bg-opacity-90 transition-all transform hover:scale-105">
+          <button
+            onClick={handleClaimOffer} // Navigasi ke explore dengan filter
+            className="bg-bright-pink text-white font-bold py-3 px-8 rounded-full mt-8 
+                       hover:bg-opacity-90 transition-all transform hover:scale-105"
+          >
             Claim Offer
           </button>
         </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Star, Heart } from 'lucide-react';
 import { useAuth } from '../context/AuthContext'; // Import useAuth
+import { useModal } from '../context/ModalContext'; // Import useModal
 
 const PropertyCard = ({ property, navigateTo }) => {
   const { currentUser, toggleWishlist, isWishlisted } = useAuth();
+  const { showModal } = useModal();
 
   const handleCardClick = () => {
     if (navigateTo) {
@@ -14,7 +16,11 @@ const PropertyCard = ({ property, navigateTo }) => {
   const handleWishlistClick = (e) => {
     e.stopPropagation(); // cegah klik kartu
     if (!currentUser) {
-      alert("Please sign in to add to wishlist.");
+      // Ganti alert dengan modal
+      showModal(
+        'Authentication Required',
+        'Please sign in to add properties to your wishlist.'
+      );
       navigateTo('login');
       return;
     }

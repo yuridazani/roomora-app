@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const HeroSection = ({ navigateTo }) => {
+  const [searchParams, setSearchParams] = useState({
+    location: '',
+    checkIn: '',
+    guests: ''
+  });
+
+  const handleInputChange = (e) => {
+    setSearchParams({ ...searchParams, [e.target.name]: e.target.value });
+  };
+
+  const handleSearch = () => {
+    navigateTo('explore', {
+      initialFilters: {
+        searchTerm: searchParams.location,
+        checkIn: searchParams.checkIn,
+        guests: searchParams.guests
+      }
+    });
+  };
+
   return (
-    <div id="hero" className="min-h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "linear-gradient(rgba(17, 53, 55, 0.7), rgba(17, 53, 55, 0.5)), url('https://images.unsplash.com/photo-15827195084a1-905c673771fd?q=80&w=2825&auto=format=fit=crop')" }}>
+    <div
+      id="hero"
+      className="min-h-screen flex items-center justify-center bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(17, 53, 55, 0.7), rgba(17, 53, 55, 0.5)), url('https://images.unsplash.com/photo-15827195084a1-905c673771fd?q=80&w=2825&auto=format&fit=crop')"
+      }}
+    >
       <div className="text-center text-white px-4">
         <h1 className="font-clash text-5xl md:text-7xl font-bold leading-tight mb-4">
           Find your stay, <br /> feel completely at home.
@@ -11,10 +38,30 @@ const HeroSection = ({ navigateTo }) => {
           Discover curated villas, hotels, and resorts that feel like they were made just for you.
         </p>
         <div className="bg-white/20 backdrop-blur-md p-3 rounded-full flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto">
-          <input type="text" placeholder="Where to? (e.g., Bali)" className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1" />
-          <input type="date" className="bg-transparent w-full md:w-1/3 text-champagne/70 focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1" />
-          <input type="number" placeholder="2 Guests" className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1" />
-          <button onClick={() => navigateTo('explore')} className="bg-bright-pink text-white font-bold rounded-full w-full md:w-auto px-8 py-3 hover:bg-opacity-90 transition-all transform hover:scale-105">
+          <input
+            type="text"
+            name="location"
+            placeholder="Where to? (e.g., Bali)"
+            onChange={handleInputChange}
+            className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+          />
+          <input
+            type="date"
+            name="checkIn"
+            onChange={handleInputChange}
+            className="bg-transparent w-full md:w-1/3 text-champagne/70 focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+          />
+          <input
+            type="number"
+            name="guests"
+            placeholder="2 Guests"
+            onChange={handleInputChange}
+            className="bg-transparent w-full md:w-1/3 placeholder-champagne/70 text-champagne focus:outline-none border-b-2 border-transparent focus:border-bright-pink transition-colors px-2 py-1"
+          />
+          <button
+            onClick={handleSearch}
+            className="bg-bright-pink text-white font-bold rounded-full w-full md:w-auto px-8 py-3 hover:bg-opacity-90 transition-all transform hover:scale-105"
+          >
             Search
           </button>
         </div>
