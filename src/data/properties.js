@@ -8,9 +8,9 @@ export const properties = [
         location: "Bali", 
         facilities: ['wifi', 'pool', 'kitchen'],
         images: [
-            "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?q=80&w=2940&auto=format=fit=crop",
-            "https://images.unsplash.com/photo-1577995138136-22d1a3835a64?q=80&w=2801&auto=format=fit=crop",
-            "https://images.unsplash.com/photo-1617855535165-3c355743b715?q=80&w=2787&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+            "https://images.unsplash.com/photo-1577995138136-22d1a3835a64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2801&q=80",
+            "https://images.unsplash.com/photo-1617855535165-3c355743b715?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
         ],
         description: "A luxurious villa nestled in the heart of Ubud's lush greenery. Perfect for couples and small families looking for a private escape.",
         reviews: [
@@ -26,8 +26,8 @@ export const properties = [
         location: "Bandung", 
         facilities: ['wifi', 'parking', 'restaurant'],
         images: [
-            "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940&auto=format=fit=crop",
-            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "An elegant hotel with classic European architecture located in Bandung. Perfect for business and leisure travelers.",
         reviews: [
@@ -43,7 +43,7 @@ export const properties = [
         location: "Lombok", 
         facilities: ['wifi', 'pool', 'beach'],
         images: [
-            "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2849&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2849&q=80"
         ],
         description: "A beachfront resort with panoramic views of the Indian Ocean in Lombok.",
         reviews: [
@@ -59,9 +59,9 @@ export const properties = [
         location: "Jogja", 
         facilities: ['wifi', 'ac'],
         images: [
-            "https://images.unsplash.com/photo-1590490359838-844d51b40263?q=80&w=2803&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1590490359838-844d51b40263?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2803&q=80"
         ],
-        description: "A cozy guesthouse with Javanese traditional design. Affordable, comfortable, and close to Jogja’s cultural landmarks.",
+        description: "A cozy guesthouse with Javanese traditional design. Affordable, comfortable, and close to Jogja's cultural landmarks.",
         reviews: [
             { user: "Agus Prasetyo", rating: 4.5, comment: "Sederhana tapi nyaman, stafnya ramah sekali." }
         ]
@@ -75,7 +75,7 @@ export const properties = [
         location: "Bali", 
         facilities: ['wifi', 'pool', 'spa'],
         images: [
-            "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "An ultra-luxurious resort by the river in Ubud. World-class service and private villas.",
         reviews: [
@@ -91,7 +91,7 @@ export const properties = [
         location: "Bandung", 
         facilities: ['wifi', 'pool', 'gym'],
         images: [
-            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "Nestled in the hills of Bandung, offering scenic views and luxurious comfort.",
         reviews: [
@@ -107,7 +107,7 @@ export const properties = [
         location: "Jogja", 
         facilities: ['wifi', 'restaurant', 'spa'],
         images: [
-            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "Colonial-style heritage hotel in the heart of Yogyakarta. Combines history with luxury.",
         reviews: [
@@ -123,7 +123,7 @@ export const properties = [
         location: "Bali", 
         facilities: ['wifi', 'pool', 'spa'],
         images: [
-            "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "Private luxury villas with Balinese design located in Nusa Dua. Each villa comes with its own pool.",
         reviews: [
@@ -139,7 +139,7 @@ export const properties = [
         location: "Lombok", 
         facilities: ['wifi', 'pool', 'beach'],
         images: [
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "A charming beachfront resort in Senggigi, Lombok. Famous for its sunset views.",
         reviews: [
@@ -155,7 +155,7 @@ export const properties = [
         location: "Jogja", 
         facilities: ['wifi', 'pool', 'golf'],
         images: [
-            "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940&auto=format=fit=crop"
+            "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
         ],
         description: "Spacious resort-style hotel with lush gardens in Yogyakarta.",
         reviews: [
