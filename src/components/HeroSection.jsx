@@ -31,12 +31,17 @@ const HeroSection = ({ navigateTo }) => {
       }}
     >
       <div className="text-center text-white px-4">
-        <h1 className="font-clash text-5xl md:text-7xl font-bold leading-tight mb-4">
+        {/* Judul lebih kecil di mobile */}
+        <h1 className="font-clash text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4">
           Find your stay, <br /> feel completely at home.
         </h1>
-        <p className="font-satoshi text-lg md:text-xl text-champagne/90 mb-8 max-w-2xl mx-auto">
+
+        {/* Paragraf lebih kecil di mobile */}
+        <p className="font-satoshi text-base md:text-xl text-champagne/90 mb-8 max-w-2xl mx-auto">
           Discover curated villas, hotels, and resorts that feel like they were made just for you.
         </p>
+
+        {/* Search Bar */}
         <div className="bg-white/20 backdrop-blur-md p-3 rounded-full flex flex-col md:flex-row items-center gap-4 max-w-3xl mx-auto">
           <input
             type="text"
